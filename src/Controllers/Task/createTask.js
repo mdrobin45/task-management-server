@@ -10,8 +10,7 @@ const createTask = async (req, res) => {
          return;
       }
       res.status(200).json({ id: result._id });
-   } catch (err) {
-      console.log(err);
+   } catch {
       res.status(500).json({ error: "Internal server error!" });
    }
 };
